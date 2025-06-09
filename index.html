@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume E-commerce-concept </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <meta name="description"
+        content="Luxe Fragrance - Discover premium perfumes and fragrances. Shop floral, woody, and citrus scents online.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <div class="logo">Luxe Fragrance</div>
+        <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">🛒 <span class="cart-count">0</span></div>
+        <button class="dark-mode-toggle">🌙</button>
+        <div class="menu-toggle">☰</div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Scent</h1>
+            <p>Explore our premium collection of fragrances.</p>
+            <button class="cta-button" title="Shop our collection">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products Section (Updated Product Card) -->
+    <section id="products" class="products">
+        <h2>Our Collection</h2>
+        <div class="filter-bar">
+            <input type="text" id="search-bar" placeholder="Search perfumes...">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="floral">Floral</option>
+                <option value="woody">Woody</option>
+                <option value="citrus">Citrus</option>
+            </select>
+            <select id="price-sort">
+                <option value="default">Sort by: Default</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+            </select>
+        </div>
+        <div class="product-grid">
+            <div class="product-card" data-category="floral" data-price="79.99" data-name="Elegance">
+                <img src="images/perfume-01.jpg" alt="Elegance perfume bottle with floral and musky notes"
+                    loading="lazy">
+                <h3>Elegance</h3>
+                <p>Floral and musky notes for a timeless scent.</p>
+                <span>$79.99</span>
+                <div class="quantity-selector">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Elegance" data-price="79.99" title="Add Elegance to cart">Add to
+                    Cart</button>
+                <button class="wishlist-button" data-name="Elegance" title="Add Elegance to wishlist"></button>
+                <button class="view-details" data-name="Elegance"
+                    data-description="Floral and musky notes for a timeless scent. Perfect for evening wear."
+                    data-price="79.99" title="View details for Elegance">View Details</button>
+            </div>
+            <!-- Repeat for other product cards (Mystic, Luxe, etc.) with similar structure -->
+            <div class="product-card" data-category="floral" data-price="79.99" data-name="Elegance">
+                <img src="images/perfume-02.jpg" alt="Elegance perfume bottle with floral and musky notes"
+                    loading="lazy">
+                <h3>Elegance</h3>
+                <p>Floral and musky notes for a timeless scent.</p>
+                <span>$79.99</span>
+                <div class="quantity-selector">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Elegance" data-price="79.99" title="Add Elegance to cart">Add to
+                    Cart</button>
+                <button class="wishlist-button" data-name="Elegance" title="Add Elegance to wishlist"></button>
+                <button class="view-details" data-name="Elegance"
+                    data-description="Floral and musky notes for a timeless scent. Perfect for evening wear."
+                    data-price="79.99" title="View details for Elegance">View Details</button>
+            </div>
+
+            <div class="product-card" data-category="floral" data-price="79.99" data-name="Elegance">
+                <img src="images/perfume-03.jpg" alt="Elegance perfume bottle with floral and musky notes"
+                    loading="lazy">
+                <h3>Elegance</h3>
+                <p>Floral and musky notes for a timeless scent.</p>
+                <span>$79.99</span>
+                <div class="quantity-selector">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Elegance" data-price="79.99" title="Add Elegance to cart">Add to
+                    Cart</button>
+                <button class="wishlist-button" data-name="Elegance" title="Add Elegance to wishlist"></button>
+                <button class="view-details" data-name="Elegance"
+                    data-description="Floral and musky notes for a timeless scent. Perfect for evening wear."
+                    data-price="79.99" title="View details for Elegance">View Details</button>
+            </div>
+
+            <div class="product-card" data-category="floral" data-price="79.99" data-name="Elegance">
+                <img src="images/perfume-04.jpg" alt="Elegance perfume bottle with floral and musky notes"
+                    loading="lazy">
+                <h3>Elegance</h3>
+                <p>Floral and musky notes for a timeless scent.</p>
+                <span>$79.99</span>
+                <div class="quantity-selector">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Elegance" data-price="79.99" title="Add Elegance to cart">Add to
+                    Cart</button>
+                <button class="wishlist-button" data-name="Elegance" title="Add Elegance to wishlist"></button>
+                <button class="view-details" data-name="Elegance"
+                    data-description="Floral and musky notes for a timeless scent. Perfect for evening wear."
+                    data-price="79.99" title="View details for Elegance">View Details</button>
+            </div>
+
+            <div class="product-card" data-category="floral" data-price="79.99" data-name="Elegance">
+                <img src="images/perfume-05.jpg" alt="Elegance perfume bottle with floral and musky notes"
+                    loading="lazy">
+                <h3>Elegance</h3>
+                <p>Floral and musky notes for a timeless scent.</p>
+                <span>$79.99</span>
+                <div class="quantity-selector">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Elegance" data-price="79.99" title="Add Elegance to cart">Add to
+                    Cart</button>
+                <button class="wishlist-button" data-name="Elegance" title="Add Elegance to wishlist"></button>
+                <button class="view-details" data-name="Elegance"
+                    data-description="Floral and musky notes for a timeless scent. Perfect for evening wear."
+                    data-price="79.99" title="View details for Elegance">View Details</button>
+            </div>
+
+
+        </div>
+        <div class="pagination">
+            <button id="prev-page">Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page">Next</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>About Luxe Fragrance</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Welcome to Luxe Fragrance, where passion meets craftsmanship. We are dedicated to bringing you
+                        the finest collection of perfumes that capture the essence of luxury and elegance.</p>
+
+                    <h3>Our Mission</h3>
+                    <p>We believe that fragrance is more than just a scent - it's a personal expression, a memory maker,
+                        and a confidence booster. Our mission is to help you find your perfect signature scent that
+                        tells your unique story.</p>
+                </div>
+
+                <div class="features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✨</span>
+                        <h4>Premium Quality</h4>
+                        <p>Carefully selected ingredients and expert craftsmanship in every bottle.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-icon">🌿</span>
+                        <h4>Natural Ingredients</h4>
+                        <p>Sustainably sourced materials for authentic and long-lasting fragrances.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-icon">🎁</span>
+                        <h4>Gift Ready</h4>
+                        <p>Beautiful packaging perfect for gifting to your loved ones.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-icon">💫</span>
+                        <h4>Expert Curation</h4>
+                        <p>Handpicked collection of the finest fragrances from around the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Modal (Updated) -->
+    <div id="details-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="details-name"
+        aria-describedby="details-description">
+        <div class="modal-content">
+            <span class="close-details" title="Close details modal">×</span>
+            <h2 id="details-name"></h2>
+            <img id="details-image" src="" alt="" class="modal-image">
+            <p id="details-description"></p>
+            <span id="details-price"></span>
+            <div class="quantity-selector">
+                <button class="quantity-decrease">-</button>
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="quantity-increase">+</button>
+            </div>
+            <button id="details-add-to-cart">Add to Cart</button>
+            <div class="reviews-section">
+                <h3>Customer Reviews</h3>
+                <div id="reviews-list"></div>
+                <form id="review-form">
+                    <label for="review-rating">Rating:</label>
+                    <select id="review-rating" required>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                    <textarea id="review-text" placeholder="Write your review..." required></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Payment Section -->
+    <section id="payment" class="payment-section">
+        <div class="container">
+            <h2>Payment Methods</h2>
+            <div class="payment-content">
+                <div class="payment-info">
+                    <div class="payment-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Credit/Debit Cards</h3>
+                        <p>We accept all major credit and debit cards including Visa, MasterCard, American Express, and
+                            Discover.</p>
+                        <div class="card-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-discover"></i>
+                        </div>
+                    </div>
+                    <div class="payment-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Payments</h3>
+                        <p>Pay conveniently using your mobile device with Apple Pay, Google Pay, or Samsung Pay.</p>
+                        <div class="card-icons">
+                            <i class="fab fa-apple-pay"></i>
+                            <i class="fab fa-google-pay"></i>
+                            <i class="fab fa-samsung-pay"></i>
+                        </div>
+                    </div>
+                    <div class="payment-card">
+                        <i class="fas fa-university"></i>
+                        <h3>Bank Transfer</h3>
+                        <p>Make secure payments directly from your bank account using our encrypted payment system.</p>
+                        <div class="card-icons">
+                            <i class="fas fa-university"></i>
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="payment-card">
+                        <i class="fas fa-lock"></i>
+                        <h3>Secure Payment</h3>
+                        <p>All transactions are encrypted and secure. We use industry-standard SSL technology to protect
+                            your data.</p>
+                        <div class="card-icons">
+                            <i class="fas fa-lock"></i>
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-features">
+                    <h3>Why Choose Our Payment System?</h3>
+                    <ul class="features-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Secure and encrypted transactions</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Multiple payment options</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Instant payment confirmation</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 customer support</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Easy refund process</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>No hidden fees</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Our Location</h3>
+                        <p>123 Perfume Street, Fragrance City, FC 12345</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone Number</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Address</h3>
+                        <p>info@perfumestore.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Working Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+                        <p>Saturday - Sunday: 10:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Luxe Fragrance</h3>
+                <p>Discover your signature scent with our premium collection of fragrances.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Follow us on Pinterest">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive updates and special offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Luxe Fragrance. All rights reserved.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
