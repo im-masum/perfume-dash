@@ -15,18 +15,195 @@
 
 <body>
     <header class="header" role="banner">
-        <div class="logo">Luxe Fragrance</div>
-        <nav class="nav" aria-label="Main navigation">
-            <ul class="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="cart-icon">🛒 <span class="cart-count">0</span></div>
-        <button class="dark-mode-toggle">🌙</button>
-        <div class="menu-toggle">☰</div>
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="#home">
+                        <span class="logo-text">Luxe Fragrance</span>
+                        <span class="logo-icon">🌸</span>
+                    </a>
+                </div>
+                <nav class="nav" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#products" class="nav-link">Shop <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#products?category=floral">Floral</a></li>
+                                <li><a href="#products?category=woody">Woody</a></li>
+                                <li><a href="#products?category=citrus">Citrus</a></li>
+                                <li><a href="#products?category=oriental">Oriental</a></li>
+                                <li><a href="#products?category=fresh">Fresh</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <li><a href="#payment" class="nav-link">Payment</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="search-toggle" aria-label="Search">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </div>
+                <div class="search-bar">
+                    <div class="search-bar-input">
+                        <input type="text" placeholder="Search for perfumes, brands, or categories..."
+                            aria-label="Search input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="search-categories">
+                        <button class="search-category active">All</button>
+                        <button class="search-category">Products</button>
+                        <button class="search-category">Categories</button>
+                        <button class="search-category">Brands</button>
+                    </div>
+                    <div class="quick-results">
+                        <!-- Quick search results will be populated by JavaScript -->
+                    </div>
+                    <div class="search-loading">
+                        <div class="search-spinner"></div>
+                        <p>Searching...</p>
+                    </div>
+                    <div class="no-results" style="display: none;">
+                        <i class="fas fa-search"></i>
+                        <p>No results found</p>
+                    </div>
+                </div>
+                <div id="user-actions" class="user-actions">
+                    <div class="user-dropdown">
+                        <button onclick="toggleUserDropdown" id="user-btn" class="user-btn" aria-label="User account">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#login" class="dropdown-item">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </a>
+                            <a href="#register" class="dropdown-item">
+                                <i class="fas fa-user-plus"></i> Register
+                            </a>
+                            <a href="#profile" class="dropdown-item">
+                                <i class="fas fa-user-circle"></i> Profile
+                            </a>
+                            <a href="#orders" class="dropdown-item">
+                                <i class="fas fa-shopping-bag"></i> Orders
+                            </a>
+                        </div>
+                    </div>
+                    <div class="wishlist-dropdown">
+                        <button onclick="toggleWishlist" class="wishlist-btn" aria-label="Wishlist">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                            <span class="wishlist-count">0</span>
+                        </button>
+                        <div class="dropdown-menu wishlist-menu">
+                            <div class="dropdown-header">
+                                <h3>Wishlist</h3>
+                                <span class="wishlist-count">0 items</span>
+                            </div>
+                            <div class="wishlist-items">
+                                <!-- Wishlist items will be dynamically added here -->
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="#wishlist" class="view-all">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-dropdown">
+                        <button id="cartBtn" class="cart-btn" aria-label="Shopping cart">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                        <div class="dropdown-menu cart-menu">
+                            <div class="dropdown-header">
+                                <h3>Shopping Cart</h3>
+                                <span class="cart-count">0 items</span>
+                            </div>
+                            <div class="cart-items">
+                                <!-- Cart items will be dynamically added here -->
+                            </div>
+                            <div class="cart-summary">
+                                <div class="subtotal">
+                                    <span>Subtotal:</span>
+                                    <span class="amount">$0.00</span>
+                                </div>
+                                <div class="shipping">
+                                    <span>Shipping:</span>
+                                    <span class="amount">Calculated at checkout</span>
+                                </div>
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="#cart" class="view-cart">View Cart</a>
+                                <button class="checkout-btn">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="search-overlay">
+            <div class="search-container">
+                <div class="search-header">
+                    <h3>Search Products</h3>
+                    <button class="search-close" aria-label="Close search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-input" placeholder="Search for perfumes, brands, or categories..."
+                        aria-label="Search input">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-suggestions">
+                    <h4>Popular Searches</h4>
+                    <div class="suggestion-tags">
+                        <button class="tag">
+                            <i class="fas fa-tag"></i>
+                            Floral Perfumes
+                        </button>
+                        <button class="tag">
+                            <i class="fas fa-tag"></i>
+                            Woody Fragrances
+                        </button>
+                        <button class="tag">
+                            <i class="fas fa-tag"></i>
+                            Summer Scents
+                        </button>
+                        <button class="tag">
+                            <i class="fas fa-tag"></i>
+                            Luxury Brands
+                        </button>
+                    </div>
+                </div>
+                <div class="recent-searches">
+                    <h4>
+                        Recent Searches
+                        <button class="clear-recent">Clear All</button>
+                    </h4>
+                    <ul class="recent-list">
+                        <!-- Recent searches will be populated by JavaScript -->
+                    </ul>
+                </div>
+                <div class="search-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Searching...</p>
+                </div>
+                <div class="search-results">
+                    <div class="result-items">
+                        <!-- Search results will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
 
@@ -39,125 +216,138 @@
         </div>
     </section>
 
-    <!-- Products Section (Updated Product Card) -->
+    <!-- Products Section -->
     <section id="products" class="products">
-        <h2>Our Collection</h2>
+        <div class="section-header">
+            <h2>Our Collection</h2>
+            <p class="section-description">Discover our curated selection of premium fragrances</p>
+        </div>
+
         <div class="filter-bar">
-            <input type="text" id="search-bar" placeholder="Search perfumes...">
-            <select id="category-filter">
-                <option value="all">All Categories</option>
-                <option value="floral">Floral</option>
-                <option value="woody">Woody</option>
-                <option value="citrus">Citrus</option>
-            </select>
-            <select id="price-sort">
-                <option value="default">Sort by: Default</option>
-                <option value="low-high">Price: Low to High</option>
-                <option value="high-low">Price: High to Low</option>
-            </select>
+            <div class="search-container">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input type="text" id="search-bar" placeholder="Search perfumes..." aria-label="Search perfumes">
+            </div>
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter" aria-label="Filter by category">
+                        <option value="all">All Categories</option>
+                        <option value="floral">Floral</option>
+                        <option value="woody">Woody</option>
+                        <option value="citrus">Citrus</option>
+                        <option value="oriental">Oriental</option>
+                        <option value="fresh">Fresh</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-sort">Sort by:</label>
+                    <select id="price-sort" aria-label="Sort products">
+                        <option value="default">Default</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Price Range:</label>
+                    <div class="price-range-slider">
+                        <input type="range" id="price-range" min="0" max="200" value="200" aria-label="Price range">
+                        <span class="price-range-value">$0 - $200</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="product-grid">
-            <div class="product-card" data-category="floral" data-price="79.99" data-name="Elegance">
-                <img src="images/perfume-01.jpg" alt="Elegance perfume bottle with floral and musky notes"
-                    loading="lazy">
-                <h3>Elegance</h3>
-                <p>Floral and musky notes for a timeless scent.</p>
-                <span>$79.99</span>
-                <div class="quantity-selector">
-                    <button class="quantity-decrease">-</button>
-                    <input type="number" class="quantity-input" value="1" min="1">
-                    <button class="quantity-increase">+</button>
-                </div>
-                <button class="add-to-cart" data-name="Elegance" data-price="79.99" title="Add Elegance to cart">Add to
-                    Cart</button>
-                <button class="wishlist-button" data-name="Elegance" title="Add Elegance to wishlist"></button>
-                <button class="view-details" data-name="Elegance"
-                    data-description="Floral and musky notes for a timeless scent. Perfect for evening wear."
-                    data-price="79.99" title="View details for Elegance">View Details</button>
-            </div>
-            <!-- Repeat for other product cards (Mystic, Luxe, etc.) with similar structure -->
-            <div class="product-card" data-category="floral" data-price="79.99" data-name="Elegance">
-                <img src="images/perfume-02.jpg" alt="Elegance perfume bottle with floral and musky notes"
-                    loading="lazy">
-                <h3>Elegance</h3>
-                <p>Floral and musky notes for a timeless scent.</p>
-                <span>$79.99</span>
-                <div class="quantity-selector">
-                    <button class="quantity-decrease">-</button>
-                    <input type="number" class="quantity-input" value="1" min="1">
-                    <button class="quantity-increase">+</button>
-                </div>
-                <button class="add-to-cart" data-name="Elegance" data-price="79.99" title="Add Elegance to cart">Add to
-                    Cart</button>
-                <button class="wishlist-button" data-name="Elegance" title="Add Elegance to wishlist"></button>
-                <button class="view-details" data-name="Elegance"
-                    data-description="Floral and musky notes for a timeless scent. Perfect for evening wear."
-                    data-price="79.99" title="View details for Elegance">View Details</button>
-            </div>
 
-            <div class="product-card" data-category="floral" data-price="79.99" data-name="Elegance">
-                <img src="images/perfume-03.jpg" alt="Elegance perfume bottle with floral and musky notes"
-                    loading="lazy">
-                <h3>Elegance</h3>
-                <p>Floral and musky notes for a timeless scent.</p>
-                <span>$79.99</span>
-                <div class="quantity-selector">
-                    <button class="quantity-decrease">-</button>
-                    <input type="number" class="quantity-input" value="1" min="1">
-                    <button class="quantity-increase">+</button>
+        <div class="product-grid" role="list" aria-label="Product list">
+            <article class="product-card" data-category="floral" data-price="79.99" data-name="Elegance"
+                data-date="2024-01-15">
+                <div class="product-badge">New</div>
+                <div class="stock-status in-stock">In Stock</div>
+                <div class="product-image">
+                    <img src="images/perfume-01.jpg" alt="Elegance perfume bottle with floral and musky notes">
+                    <div class="product-actions">
+                        <button class="quick-view-btn" title="Quick View" aria-label="View product details">
+                            <i class="fas fa-eye" aria-hidden="true"></i>
+                        </button>
+                        <button class="wishlist-btn" title="Add to Wishlist" aria-label="Add to wishlist">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                        </button>
+                        <button onclick="compareProducts()" class="compare-btn" title="Compare"
+                            aria-label="Compare product">
+                            <i class="fas fa-exchange-alt" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
-                <button class="add-to-cart" data-name="Elegance" data-price="79.99" title="Add Elegance to cart">Add to
-                    Cart</button>
-                <button class="wishlist-button" data-name="Elegance" title="Add Elegance to wishlist"></button>
-                <button class="view-details" data-name="Elegance"
-                    data-description="Floral and musky notes for a timeless scent. Perfect for evening wear."
-                    data-price="79.99" title="View details for Elegance">View Details</button>
-            </div>
-
-            <div class="product-card" data-category="floral" data-price="79.99" data-name="Elegance">
-                <img src="images/perfume-04.jpg" alt="Elegance perfume bottle with floral and musky notes"
-                    loading="lazy">
-                <h3>Elegance</h3>
-                <p>Floral and musky notes for a timeless scent.</p>
-                <span>$79.99</span>
-                <div class="quantity-selector">
-                    <button class="quantity-decrease">-</button>
-                    <input type="number" class="quantity-input" value="1" min="1">
-                    <button class="quantity-increase">+</button>
-                </div>
-                <button class="add-to-cart" data-name="Elegance" data-price="79.99" title="Add Elegance to cart">Add to
-                    Cart</button>
-                <button class="wishlist-button" data-name="Elegance" title="Add Elegance to wishlist"></button>
-                <button class="view-details" data-name="Elegance"
-                    data-description="Floral and musky notes for a timeless scent. Perfect for evening wear."
-                    data-price="79.99" title="View details for Elegance">View Details</button>
-            </div>
-
-            <div class="product-card" data-category="floral" data-price="79.99" data-name="Elegance">
-                <img src="images/perfume-05.jpg" alt="Elegance perfume bottle with floral and musky notes"
-                    loading="lazy">
-                <h3>Elegance</h3>
-                <p>Floral and musky notes for a timeless scent.</p>
-                <span>$79.99</span>
-                <div class="quantity-selector">
-                    <button class="quantity-decrease">-</button>
-                    <input type="number" class="quantity-input" value="1" min="1">
-                    <button class="quantity-increase">+</button>
-                </div>
-                <button class="add-to-cart" data-name="Elegance" data-price="79.99" title="Add Elegance to cart">Add to
-                    Cart</button>
-                <button class="wishlist-button" data-name="Elegance" title="Add Elegance to wishlist"></button>
-                <button class="view-details" data-name="Elegance"
-                    data-description="Floral and musky notes for a timeless scent. Perfect for evening wear."
-                    data-price="79.99" title="View details for Elegance">View Details</button>
-            </div>
-
-
         </div>
-        <div class="pagination">
-            <button id="prev-page">Previous</button>
-            <span id="page-info">Page 1</span>
-            <button id="next-page">Next</button>
+        <div class="product-info">
+            <div class="category-badge">Floral</div>
+            <h3>Elegance</h3>
+            <div class="rating" role="img" aria-label="4.5 out of 5 stars">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                <span>(24)</span>
+            </div>
+            <p>Floral and musky notes for a timeless scent.</p>
+            <div class="product-meta">
+                <div class="price-tag">$79.99</div>
+                <div class="product-size">100ml</div>
+            </div>
+            <div class="quantity-selector">
+                <button class="quantity-decrease" aria-label="Decrease quantity">-</button>
+                <input type="number" class="quantity-input" value="1" min="1" aria-label="Product quantity">
+                <button class="quantity-increase" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="add-to-cart" data-name="Elegance" data-price="79.99">
+                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                Add to Cart
+            </button>
+        </div>
+        </article>
+        <!-- More product cards will be dynamically added here -->
+        </div>
+
+        <div class="pagination" role="navigation" aria-label="Product pagination">
+            <button id="prev-page" class="pagination-btn" aria-label="Previous page">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                Previous
+            </button>
+            <div class="page-numbers" role="list" aria-label="Page numbers">
+                <button class="page-number active" aria-label="Page 1" aria-current="page">1</button>
+                <button class="page-number" aria-label="Page 2">2</button>
+                <button class="page-number" aria-label="Page 3">3</button>
+            </div>
+            <button id="next-page" class="pagination-btn" aria-label="Next page">
+                Next
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="product-features">
+            <div class="feature">
+                <i class="fas fa-truck" aria-hidden="true"></i>
+                <h4>Free Shipping</h4>
+                <p>On orders over $50</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-undo" aria-hidden="true"></i>
+                <h4>Easy Returns</h4>
+                <p>30-day return policy</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+                <h4>Secure Payment</h4>
+                <p>100% secure checkout</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset" aria-hidden="true"></i>
+                <h4>24/7 Support</h4>
+                <p>Dedicated support team</p>
+            </div>
         </div>
     </section>
 
