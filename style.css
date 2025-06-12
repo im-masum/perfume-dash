@@ -2759,7 +2759,7 @@ input:focus, select:focus, textarea:focus {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 300px;
+    width: 450px;
     background: var(--white);
     display: flex;
     border: 1px solid gray;
@@ -2793,6 +2793,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .search-bar-input {
+    width: 100%;
     position: relative;
     margin-bottom: 1rem;
     border: 1px solid gray;
