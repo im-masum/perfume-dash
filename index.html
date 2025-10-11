@@ -23,7 +23,7 @@
                         <span class="logo-icon">🌸</span>
                     </a>
                 </div>
-                <nav class="nav" aria-label="Main navigation">
+                <!-- <nav class="nav" aria-label="Main navigation">
                     <ul class="nav-list">
                         <li><a href="#home" class="nav-link active">Home</a></li>
                         <li class="nav-dropdown">
@@ -39,7 +39,7 @@
                         <li><a href="#about" class="nav-link">About</a></li>
                         <li><a href="#contact" class="nav-link">Contact</a></li>
                         <li><a href="#payment" class="nav-link">Payment</a></li>
-                    </ul>
+                    </ul> -->
                 </nav>
             </div>
             <div class="header-right">
@@ -48,26 +48,50 @@
                 </div>
                 <div class="search-bar">
                     <div class="search-bar-input">
-                        <input type="text" placeholder="Search for perfumes..."
-                            aria-label="Search input">
-                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Search for perfumes..." aria-label="Search input"
+                            class="search-input" autocomplete="off">
+                        <button class="clear-search" aria-label="Clear search">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <button class="search-submit" aria-label="Submit search">
+                            <i class="fas fa-search search-icon"></i>
+                        </button>
                     </div>
                     <div class="search-categories">
-                        <button class="search-category active">All</button>
-                        <button class="search-category">Products</button>
-                        <button class="search-category">Categories</button>
-                        <button class="search-category">Brands</button>
+                        <button class="search-category active" data-category="all">
+                            <i class="fas fa-th-large"></i> All
+                        </button>
+                        <button class="search-category" data-category="products">
+                            <i class="fas fa-box"></i> Products
+                        </button>
+                        <button class="search-category" data-category="categories">
+                            <i class="fas fa-tags"></i> Categories
+                        </button>
+                        <button class="search-category" data-category="brands">
+                            <i class="fas fa-copyright"></i> Brands
+                        </button>
                     </div>
                     <div class="quick-results">
-                        <!-- Quick search results will be populated by JavaScript -->
+                        <div class="results-header">
+                            <h4>Quick Results</h4>
+                            <button class="close-results" aria-label="Close results">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="results-content">
+                            <!-- Quick search results will be populated by JavaScript -->
+                        </div>
                     </div>
                     <div class="search-loading">
-                        <div class="search-spinner"></div>
+                        <div class="search-spinner">
+                            <div class="spinner-circle"></div>
+                        </div>
                         <p>Searching...</p>
                     </div>
                     <div class="no-results" style="display: none;">
                         <i class="fas fa-search"></i>
                         <p>No results found</p>
+                        <p class="suggestion">Try different keywords or browse our categories</p>
                     </div>
                 </div>
                 <div id="user-actions" class="user-actions">
