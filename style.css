@@ -938,17 +938,23 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 80vh;
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Supra-Floral.jpg');
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
-    padding: 2rem;
+    padding: min(2rem, 20%) 2rem;
+    margin: 0 auto;
+    position: relative;
 }
 
 .hero-content {
