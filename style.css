@@ -471,7 +471,7 @@ body {
     visibility: visible;
 }
 
-/* .search-container {
+ .search-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -483,7 +483,7 @@ body {
     padding: 2rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 
-} */
+} 
 
 .search-header {
     display: flex;
@@ -1641,8 +1641,8 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: #fff;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     padding: 4rem 2rem 1rem;
     margin-top: 4rem;
 }
