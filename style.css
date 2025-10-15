@@ -22,7 +22,7 @@
     --text-color: #e0e0e0;
     --shadow: 0 4px 15px rgba(239, 235, 235, 0.983);
     --transition: all 0.3s ease;
-    --nav-bg:#000000;
+    --nav-bg:#0f0116;
 
 }
 
@@ -86,7 +86,8 @@ body {
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
-    padding: min(.8rem, 4%);
+    padding: min(.5rem, 4%);
+    background: var(--nav-bg);
 }
 
 /* Logo Styles */
