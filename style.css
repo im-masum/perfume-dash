@@ -22,7 +22,10 @@
     --text-color: #e0e0e0;
     --shadow: 0 4px 15px rgba(239, 235, 235, 0.983);
     --transition: all 0.3s ease;
-    --nav-bg:#0f0116;
+    --nav-bg: #0f0116;
+    --primary-color: #c5ad95;
+    --secondary-color: #9d5f0a;
+    --accent-color: #090c24;
 
 }
 
