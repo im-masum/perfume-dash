@@ -8,7 +8,7 @@
 
 :root {
     --primary-color: #6b4e31;
-    --secondary-color: #8b6f47;
+    --secondary-color: #f4ac49;
     --accent-color: #d4af37;
     --text-color: #1f1b1b;
     --bg-color: #f9f9f9;
@@ -34,7 +34,7 @@ body {
     max-width: 100%;
     line-height: 1.5;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background: var(--bg-color);
 }
 
 /* Header Styles */
