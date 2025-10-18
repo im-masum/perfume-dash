@@ -259,7 +259,6 @@ body {
 .user-btn:hover i,
 .wishlist-btn:hover i,
 .cart-btn:hover i,
-.search-toggle:hover i,
 .dark-mode-toggle:hover i {
     transform: scale(1.1);
 }
@@ -464,9 +463,9 @@ body {
     box-shadow: 4px 12px 20px rgba(0, 0, 0, 0.05);
 }
 
-.search-toggle:hover {
+.search-toggle:hover{
     color: var(--primary-color);
-    transform: scale(1.1);
+
 }
 
 .search-overlay {
