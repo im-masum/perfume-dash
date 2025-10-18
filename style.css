@@ -72,6 +72,7 @@ body {
     padding: min(1rem, 8%) 1rem;
     margin: 0 auto;
     position: relative;
+    
 }
 
 .header-right .user-actions {
