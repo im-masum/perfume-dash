@@ -2769,6 +2769,10 @@ input:focus, select:focus, textarea:focus {
 .header-right .search-toggle i {
     font-size: 1.1rem;
     transition: transform 0.3s ease;
+    padding: min(.2rem, 10%) .4rem;
+    border: none;
+    border-radius: 4px;
+    
 }
 
 .header-right .search-toggle:hover i {
